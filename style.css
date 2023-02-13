@@ -29,7 +29,7 @@
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
     --mb-1: 1rem;
-    --mb-1-5-: 1.5rem;
+    --mb-1-5: 1.5rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem; 
 
@@ -64,4 +64,41 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+}
+h1, h2, h3 ,h4{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.section{
+    padding: 2rem 0 4rem;
+}
+.section_title{
+    font-size: var(--h1-font-size);
+}
+.section_subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+}
+.section_title, .section_subtitle{
+    text-align: center;
+}
+.container{
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
 }
