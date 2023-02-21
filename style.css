@@ -81,3 +81,33 @@ header{
 .nav-items a:hover{
     color: var(--second-color);
 }
+/*Home*/
+.home{
+    position: relative;
+    max-width: 1250px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
+}
+.home .home-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.home-container .media-icons{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+}
+.home-container .media-icons a{
+    color: var(--second-color);
+    font-size: 1.5rem;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
