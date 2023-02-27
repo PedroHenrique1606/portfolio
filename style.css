@@ -81,6 +81,16 @@ header{
 .nav-items a:hover{
     color: var(--second-color);
 }
+.language{
+    border: none;
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+.language:hover{
+    color: var(--second-color);
+    cursor: pointer;
+}
 /*Home*/
 .home{
     position: relative;
