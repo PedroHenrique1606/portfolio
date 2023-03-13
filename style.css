@@ -648,6 +648,7 @@ footer a{
 }
 .theme-btn .fa-sun{
     display: none;
+    transition: .3s ease;
 }
 .dark-theme{
     --first-color: #fff;
