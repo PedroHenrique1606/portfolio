@@ -51,16 +51,40 @@ const closeBtn = document.querySelector('.nav-close-btn');
 const navigation = document.querySelector('.navigation');
 const navItems = document.querySelector('.nav-items');
 
-if(navigation){
-    navigation.addEventListener("click", () => {
-        navigation.classList.add("active")
-    });
-}
-if(closeBtn){
-    closeBtn.addEventListener("click", () => {
-        navigation.classList.remove("active")
-    });
-}
+menuBtn.addEventListener("click", () => {
+    navigation.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    navigation.classList.remove("active");
+});
+
+
+// class mobileNavBar {
+//     constructor(menuBtn, closeBtn, navigation, navItems){
+//         this.menuBtn = document.querySelector(nav-menu-btn);
+//         this.closeBtn = document.querySelector(nav-close-btn);
+//         this.navigation = document.querySelector(navigation);
+//         this.navItems = document.querySelector(nav-items);
+//         this.activeClass = "active"
+//     }
+//     addClickEvent(){
+//         this.mobileNavBar.addEventListener("click", () => console.log("iae"));
+//     }
+//     init(){
+//         if(this.mobileNavBar){
+//             this.addClickEvent();
+//         }
+//         return this
+//     }
+// }
+// const mobileNavBar = new mobileNavBar(
+//     '.nav-menu-btn',
+//     '.nav-close-btn',
+//     '.navigation',
+//     '.nav-items',
+// );
+// mobileNavBar.init()
 
 // navItems.forEach((navItem) => {
 //     navItem.addEventListener("click", () => {

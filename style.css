@@ -718,8 +718,36 @@ footer a{
         margin: 10px 0px 22px;
     }
 }
-/* @media screen and (max-width: 730px){
+@media screen and (max-width: 730px){
     body{
         margin: 5rem 0 0 0;
     }
-} */
+    .section-title-one{
+        font-size: 3em;
+    }
+    .section-title-two{
+        font-size: 2em;
+        transform: translateY(-65);
+    }
+    .home .home-container{
+        display: grid;
+    }
+    .home-container .home-img{
+        position: absolute;
+    }
+    .home-container .home-img img{
+        width: 65%;
+        transform: translate(80px, -180px);
+    }
+    .home .home-container .info{
+        font-size: 0.8rem;
+    }
+    .media-icons{
+        margin-bottom: 80px;
+    }
+    .skills-info h4 label{
+        display: grid;
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -96,10 +96,11 @@ header.sticky .nav-bar{
     color: var(--first-color);
     font-size: var(--normal-font-size);
     font-weight: 500;
-}
-.nav-items a:not(:last-child){
     margin-right: 50px;
 }
+/* .nav-items a:not(:last-child){
+    margin-right: 50px;
+} */
 .nav-items a:hover{
     color: var(--second-color);
 }
@@ -114,6 +115,9 @@ header.sticky .nav-bar{
     color: var(--second-color);
     cursor: pointer;
 }
+/* .nav-menu-btn{
+    display: none;
+}  */
 /*Home*/
 .home{
     position: relative;
@@ -209,14 +213,14 @@ header.sticky .nav-bar{
 /*About*/
 .section{
     position: relative;
-    width: 1150px;
+    max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
     padding: 6rem 2rem 2rem;
 }
 .sub-section{
     position: relative;
-    width: 1150px;
+    max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
     padding: 6rem 0;
@@ -286,6 +290,13 @@ header.sticky .nav-bar{
 .about-info .professional-list{
     display: flex;
     column-gap: 30px;
+}
+.about-info .professional-list .list-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 20px;
 }
 .about-info .professional-list .list-item h3{
     font-size: 2.5em;
@@ -500,78 +511,6 @@ header.sticky .nav-bar{
     margin: 20px 0;
     border-radius: 10px;
 }
-/*CONCATC-ME*/
-.contact .container .content{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.contact-left h2{
-    font-size: 2.1em;
-    font-weight: 800;
-    margin-bottom: 40px;
-}
-.contact-list li{
-    margin-bottom: 40px;
-}
-.contact-list li h3{
-    font-size: 1.3em;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.contact-list li h3 i{
-    color: var(--second-color);
-    font-size: 1.3em;
-    margin-right: 10px;
-}
-.contact-list li span{
-    color: var(--third-color);
-    margin-left: 40px;
-}
-.contact-list li span a{
-    color: var(--third-color);
-}
-.contact-right p{
-    color: var(--third-color);
-    font-size: 1.6em;
-    margin-bottom: 30px;
-}
-.contact-right p span{
-    color: var(--first-color);
-    font-weight: 700;
-}
-.contact-form input, .contact-form textarea{
-    border: none;
-    color: var(--first-color);
-    background: var(--transparent-color-02);
-    font-size: var(--normal-font-size);
-    margin-bottom: 20px;
-    padding: 15px 40px 40px 20px;
-    border-radius: 5px;
-}
-.contact-form textarea{
-    width: 100%;
-    resize: none;
-}
-::placeholder{
-    color: var(--first-color);
-}
-.contact-form .first-row input{
-    width: 100%;
-}
-.contact-form .second-row{
-    display: flex;
-    justify-content: space-between;
-}
-.contact-form .second-row input{
-    width: 48%;
-}
-.contact-form .btn{
-    border: none;
-    margin: 0;
-    border-radius: 5px;
-    cursor: pointer;
-}
 /*FOOTER*/
 footer{
     display: flex;
@@ -648,6 +587,7 @@ footer a{
 }
 .theme-btn .fa-sun{
     display: none;
+    transition: .3s ease;
 }
 .dark-theme{
     --first-color: #fff;
@@ -667,4 +607,147 @@ footer a{
     --scroll-bar-color: #c1ceff;
     --scroll-thumb-color: #282f4e;
     --scroll-thumb-hover-color: #454f6b;
+}
+/*Media queries*/
+@media screen and (max-width: 1070px){
+    .navigation{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--transparent-color-01);
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease;
+    }
+    .navigation.active{
+        visibility: visible;
+        opacity: 1;
+    }
+    .navigation.active .nav-items{
+        transform: translateY(0);
+    }
+    .nav-items{
+        position: relative;
+        background: var(--modal-bg-color);
+        width: 600px;
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+        transform: translateY(-50px);
+        transition: .3s ease;
+    }
+    .nav-items a{
+        margin: 15px 50px;
+    }
+    .nav-menu-btn{
+        background: url(../assets/menu-btn.png) no-repeat;
+        filter: var(--color-filter);
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: block;
+    }
+    .nav-close-btn{
+        position: absolute;
+        background: url(../assets/close-btn.png) no-repeat;
+        filter: var(--color-filter);
+        background-size: 12px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .home .home-container .info{
+        font-size: 0.85rem;
+    }
+    .about .container .content{
+        display: grid;
+        width: 100%;
+        row-gap: 20px;
+    }
+    .about-img img{
+        min-width: 0;
+        width: 100%;
+    }
+    .about-info{
+        min-width: 0;
+        width: 100%;
+    }
+    .about-info .professional-list{
+        flex-direction: column;
+    }
+    .about-info .professional-list .list-item{
+        justify-content: start;
+    }
+    footer .footer-container{
+        flex-direction: column;
+    }
+    .footer-container .about, .footer-container .info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+    } 
+    .footer-container .info ul{
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer-container .info ul li{
+        margin: 5px;
+    }
+    .footer-container .hr{
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 10px 0px 22px;
+    }
+}
+@media screen and (max-width: 730px){
+    body{
+        margin: 5rem 0 0 0;
+    }
+    .section-title-one{
+        font-size: 3em;
+    }
+    .section-title-two{
+        font-size: 2em;
+        transform: translateY(-65);
+    }
+    .home .home-container{
+        display: grid;
+    }
+    .home-container .home-img{
+        position: absolute;
+    }
+    .home-container .home-img img{
+        width: 65%;
+        transform: translate(80px, -180px);
+    }
+    .home .home-container .info{
+        font-size: 0.8rem;
+    }
+    .media-icons{
+        margin-bottom: 80px;
+    }
+    .skills-info h4 label{
+        display: grid;
+        align-items: center;
+        text-align: center;
+    }
 }
